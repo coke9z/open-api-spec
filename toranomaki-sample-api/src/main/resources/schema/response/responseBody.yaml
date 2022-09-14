@@ -1,0 +1,11 @@
+components:
+  schemas:
+    SampleResponseBody:
+      type: object
+      properties:
+        message:
+          $ref: "./../definitions.yaml#/components/schemas/message"
+        header:
+          $ref: "./../definitions.yaml#/components/schemas/headerParam"
+        query:
+          $ref: "./../definitions.yaml#/components/schemas/queryParam"

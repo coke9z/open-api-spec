@@ -1,0 +1,42 @@
+openapi: "3.0.3"
+info:
+  title: OAS Sample API
+  description: 虎の巻用
+  version: "1.0"
+
+servers:
+  - url: https://piyopiyo.com/sample
+    description: 開発
+  - url: https://hogehoge.com/sample
+    description: 本番
+
+paths:
+  /sample:
+    post:
+      summary: Sample API
+      parameters:
+        - in: query
+          name: sampleQuery
+          description: クエリ
+          required: true
+          schema:
+            $ref: "./schema/parameter/queryParam.yaml#/components/schemas/queryParam"
+        - in: header
+          name: SAMPLE-HEADER
+          description: ヘッダー
+          required: true
+          schema:
+            $ref: "./schema/parameter/headerParam.yaml#/components/schemas/headerParam"
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              $ref: "./schema/request/requestBody.yaml#/components/schemas/SampleRequestBody"
+      responses:
+        "200":
+          description: "Success."
+          content:
+            application/json:
+              schema:
+                $ref: "./schema/response/responseBody.yaml#/components/schemas/SampleResponseBody"

@@ -1,0 +1,7 @@
+components:
+  schemas:
+    SampleRequestBody:
+      type: object
+      properties:
+        message:
+          type: string

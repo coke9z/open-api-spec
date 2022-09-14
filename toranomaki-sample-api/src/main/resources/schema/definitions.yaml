@@ -1,0 +1,12 @@
+components:
+  schemas:
+
+    headerParam:
+      type: string
+
+    queryParam:
+      type: integer
+      format: int32
+
+    message:
+      type: string
