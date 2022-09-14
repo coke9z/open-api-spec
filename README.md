@@ -1,1 +1,1 @@
-# open-api-spec
+# toranomaki-sample
