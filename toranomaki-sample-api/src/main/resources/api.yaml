@@ -1,4 +1,7 @@
+#Required
 openapi: "3.0.3"
+
+#Required
 info:
   title: OAS Sample API
   description: 虎の巻用
@@ -10,6 +13,7 @@ servers:
   - url: https://hogehoge.com/sample
     description: 本番
 
+#Required
 paths:
   /sample:
     post:
@@ -40,3 +44,7 @@ paths:
             application/json:
               schema:
                 $ref: "./schema/response/responseBody.yaml#/components/schemas/SampleResponseBody"
+
+externalDocs:
+  description: DB定義などのリンク
+  url: https://fugagaga.com/db
