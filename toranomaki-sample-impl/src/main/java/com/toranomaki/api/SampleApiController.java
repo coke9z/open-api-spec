@@ -13,9 +13,9 @@ public class SampleApiController implements SampleApi {
 
   @Override
   public ResponseEntity<SampleResponseBody> samplePost(
-      SampleRequestBody sampleRequestBody,
       Integer query,
-      String header) {
+      String header,
+      SampleRequestBody sampleRequestBody) {
 
     SampleResponseBody response = new SampleResponseBody()
         .header(header)
