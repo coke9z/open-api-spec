@@ -48,6 +48,25 @@
               <output>${project.build.directory}/generated-sources/api</output>
             </configuration>
           </execution>
+          <!-- フロント用 -->
+          <execution>
+            <id>client1</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+              <language>javascript</language>
+              <configOptions>
+                <generateApis>true</generateApis>
+                <apiPackage>com.toranomaki.front</apiPackage>
+                <generateModels>true</generateModels>
+                <modelPackage>com.toranomaki.front.model</modelPackage>
+                <sourceFolder>src/main</sourceFolder>
+              </configOptions>
+              <output>${project.build.directory}/generated-sources/front</output>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 
