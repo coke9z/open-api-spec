@@ -90,14 +90,16 @@ Index.convert({type: 'string', data: readFileData}, {},
             }
           });
 
-      // console.log("4. テスト");
-      // newman.run({
-      //   collection: collection,
-      //   reporters: 'cli',
-      //   environment: require('./test_file/local.postman_environment.json')
-      // }, (err) => {
-      //   if (err) console.error(err);
-      // });
+      console.log("4. テスト");
+      newman.run({
+        collection: collection,
+        reporters: 'cli',
+        environment: require('./test_file/local.postman_environment.json')
+      }, (err) => {
+        if (err) {
+          console.error(err);
+        }
+      });
 
     }
 );

@@ -1,5 +1,6 @@
-package com.toranomaki.api;
+package com.toranomaki.api.sample.controller;
 
+import com.toranomaki.api.SampleApi;
 import com.toranomaki.model.SampleRequestBody;
 import com.toranomaki.model.SampleResponseBody;
 import org.springframework.http.HttpStatus;

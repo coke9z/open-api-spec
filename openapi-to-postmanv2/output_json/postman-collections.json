@@ -1,0 +1,354 @@
+{
+    "_": {
+        "postman_id": "0eb7b2e6-7cda-4b73-ae27-c15eae032241"
+    },
+    "item": [
+        {
+            "id": "136a5e8c-14d9-4ea0-b774-ac365c72b223",
+            "name": "test",
+            "item": [
+                {
+                    "id": "8ed07ce6-d60e-44c6-bd2e-7faff3b7e64a",
+                    "name": "POST Test API",
+                    "request": {
+                        "name": "POST Test API",
+                        "description": {
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "test",
+                                "post"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "query",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "disabled": false,
+                                "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                },
+                                "key": "TEST-HEADER",
+                                "value": "<string>"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"age\": \"<integer>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [
+                        {
+                            "_": {
+                                "postman_previewlanguage": "json"
+                            },
+                            "id": "6a2013a9-5d5a-45b6-8970-90601e19169d",
+                            "name": "Success.",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "test",
+                                        "post"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "query",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "TEST-HEADER",
+                                        "value": "<string>"
+                                    }
+                                ],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"<string>\",\n  \"age\": \"<integer>\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"name\": \"voluptate in\"\n}",
+                            "cookie": []
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "2e394cb0-af9a-4346-a103-bee71200f413",
+                                "type": "text/javascript",
+                                "exec": [
+                                    "pm.test('response 200 test', () => {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "fd49ced9-21be-4876-937a-b0570fe443dd",
+                    "name": "GET Test API",
+                    "request": {
+                        "name": "GET Test API",
+                        "description": {
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "test",
+                                "get"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "name",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "_": {
+                                "postman_previewlanguage": "json"
+                            },
+                            "id": "84d853ab-aae6-4b8e-83b1-e7d45e01744c",
+                            "name": "Success.",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "test",
+                                        "get"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"name\": \"voluptate\",\n  \"age\": -55662055,\n  \"query\": \"in in aute\",\n  \"header\": \"laborum cillum do\"\n}",
+                            "cookie": []
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "ff214b41-12b2-4e2a-a730-5a19da4d14fe",
+                                "type": "text/javascript",
+                                "exec": [
+                                    "pm.test('response 200 test', () => {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "d4f670be-b027-4a05-a717-bf788114888b",
+                    "name": "DELETE Test API",
+                    "request": {
+                        "name": "DELETE Test API",
+                        "description": {
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "test",
+                                "delete"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "name",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "DELETE"
+                    },
+                    "response": [
+                        {
+                            "_": {
+                                "postman_previewlanguage": "json"
+                            },
+                            "id": "7a6be565-88f3-416d-b719-f34a973919e8",
+                            "name": "Success.",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "test",
+                                        "delete"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "DELETE",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"message\": \"esse sed\"\n}",
+                            "cookie": []
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "28962b61-0122-40ea-b73e-facf4a5362f9",
+                                "type": "text/javascript",
+                                "exec": [
+                                    "pm.test('response 200 test', () => {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "type": "string",
+            "value": "https://piyopiyo.com/sample",
+            "key": "baseUrl"
+        }
+    ],
+    "info": {
+        "_postman_id": "0eb7b2e6-7cda-4b73-ae27-c15eae032241",
+        "name": "OAS Sample API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "虎の巻用",
+            "type": "text/plain"
+        }
+    }
+}
