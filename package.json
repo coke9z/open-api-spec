@@ -1,0 +1,22 @@
+{
+  "name": "open-api-spec",
+  "version": "1.0.0",
+  "description": "- OpenAPI yamlファイル <br>\r  `./toranomaki-sample-api/src/main/resources/api.yaml`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coke9z/open-api-spec.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coke9z/open-api-spec/issues"
+  },
+  "homepage": "https://github.com/coke9z/open-api-spec#readme",
+  "dependencies": {
+    "redoc-cli": "^0.13.20"
+  }
+}

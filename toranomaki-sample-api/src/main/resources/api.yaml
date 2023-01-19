@@ -15,35 +15,118 @@ servers:
 
 #Required
 paths:
-  /sample:
+#  /sample:
+#    post:
+#      summary: Sample API
+#      parameters:
+#        - in: query
+#          name: sampleQuery
+#          description: クエリ
+#          required: true
+#          schema:
+#            $ref: "./schema/parameter/queryParam.yaml#/components/schemas/queryParam"
+#        - in: header
+#          name: SAMPLE-HEADER
+#          description: ヘッダー
+#          required: true
+#          schema:
+#            $ref: "./schema/parameter/headerParam.yaml#/components/schemas/headerParam"
+#      requestBody:
+#        required: true
+#        content:
+#          "application/json":
+#            schema:
+#              $ref: "./schema/request/requestBody.yaml#/components/schemas/SampleRequestBody"
+#      responses:
+#        "200":
+#          description: "Success."
+#          content:
+#            application/json:
+#              schema:
+#                $ref: "./schema/response/responseBody.yaml#/components/schemas/SampleResponseBody"
+  ## テスト確認用API
+  /test/post:
     post:
-      summary: Sample API
+      summary: POST Test API
       parameters:
         - in: query
-          name: sampleQuery
-          description: クエリ
+          name: query
           required: true
           schema:
-            $ref: "./schema/parameter/queryParam.yaml#/components/schemas/queryParam"
+            type: string
         - in: header
-          name: SAMPLE-HEADER
-          description: ヘッダー
+          name: TEST-HEADER
           required: true
           schema:
-            $ref: "./schema/parameter/headerParam.yaml#/components/schemas/headerParam"
+            type: string
       requestBody:
         required: true
         content:
           "application/json":
             schema:
-              $ref: "./schema/request/requestBody.yaml#/components/schemas/SampleRequestBody"
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                age:
+                  type: integer
       responses:
         "200":
           description: "Success."
           content:
             application/json:
               schema:
-                $ref: "./schema/response/responseBody.yaml#/components/schemas/SampleResponseBody"
+                type: object
+                properties:
+                  name:
+                    type: string
+  /test/get:
+    get:
+      summary: GET Test API
+      parameters:
+        - in: query
+          name: name
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Success."
+          content:
+            "application/json":
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  age:
+                    type: integer
+                    format: int32
+                  query:
+                    type: string
+                  header:
+                    type: string
+  /test/delete:
+    delete:
+      summary: DELETE Test API
+      parameters:
+        - in: query
+          name: name
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Success."
+          content:
+            "application/json":
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
 
 externalDocs:
   description: DB定義などのリンク

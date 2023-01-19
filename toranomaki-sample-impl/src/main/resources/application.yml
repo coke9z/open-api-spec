@@ -1,0 +1,9 @@
+# MySQL
+mysql:
+  datasource:
+    # Local(Docker)での確認用
+    url: jdbc:mysql://mysql:3306/test_database?useUnicode=yes&characterEncoding=UTF-8
+    username: user
+    password: passw0rd
+  jackson:
+    time-zone: Asia/Tokyo
